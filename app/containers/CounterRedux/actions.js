@@ -22,7 +22,6 @@ export function counterInit() {
  * @return {object}    An action object with a type of CHANGE_USERNAME
  */
 export function counterAdd() {
-  console.log('Adding..');
   return {
     type: C.COUNTER_ADD,
   };

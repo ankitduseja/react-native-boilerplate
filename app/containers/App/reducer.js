@@ -1,21 +1,9 @@
-import { ActionConst } from 'react-native-router-flux';
+import { combineReducers } from 'redux';
 
-const initialState = {
-  scene: {},
-};
+import globalReducer from './globalReducer';
+import homeReducer from '../HomePage/reducer';
+import counterReducer from '../CounterRedux/reducer';
 
-export default function reducer(state = initialState, action = {}) {
-  switch (action.type) {
-    // focus action is dispatched when a new screen comes into focus
-    case ActionConst.FOCUS:
-      return {
-        ...state,
-        scene: action.scene,
-      };
+const reducers = combineReducers({homeReducer,globalReducer,counterReducer});
 
-    // ...other actions
-
-    default:
-      return state;
-  }
-}
+export default reducers;

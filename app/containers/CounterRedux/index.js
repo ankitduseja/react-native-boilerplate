@@ -28,8 +28,8 @@ class CounterReduxPage extends Component {
     dispatch(actionCreators.counterInit());
   }
   render() {
-    console.log('Props',this.props);
-    console.log('State',this.state);
+    // console.log('Props',this.props);
+    // console.log('State',this.state);
     let counters=this.props.counters,countersArr=[];
     for (var i = 0; i < counters.length; i++) {
       countersArr.push(<CounterStateless key={'counter'+i} count={counters[i]} id={i} onIncrement={this.props.counterIncrement} onDecrement={this.props.counterDecrement} />);

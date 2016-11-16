@@ -17,7 +17,6 @@ function mapDispatchToProps(dispatch) { return bindActionCreators(actions,dispat
 
 class HomePage extends Component {
   render() {
-    console.log('Running The HomePage');
     return <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to HomePage</Text>
         <Button style={styles.pageButton} title="Welcome Page" onPress={RouteActions.about} accessibilityLabel="Go to About Page"/>
