@@ -8,9 +8,11 @@ A React Native boilerplate with Redux, Sagas, Reselect & more. The goal is to ma
 * react-native-router-flux
 * react-redux
 * redux
-* redux-saga
-* reselect
-* immutable
+* [redux-persist](https://github.com/rt2zz/redux-persist) - helps in persisting redux store data across sessions.
+* [redux-persist-transform-immutable](https://github.com/rt2zz/redux-persist-transform-immutable) - Add immutable sub-reducer support to redux-persist.
+* [redux-saga](https://github.com/yelouafi/redux-saga) - To make asynchronous actions easier in react/redux.
+* [reselect](https://github.com/reactjs/reselect) - Selector Library for redux.
+* [immutable](https://facebook.github.io/immutable-js/) - Immutable data cannot be changed once created, great debugging experience.
 * (more to be added soon)
 
 ## How to get started?
