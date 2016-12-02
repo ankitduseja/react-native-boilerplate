@@ -1,4 +1,4 @@
-# React Native Stack
+# React Native Boilerplate
 
 A React Native boilerplate with Redux, Sagas, Reselect & more. The goal is to maintain an up-to-date, efficient, production-level yet easy-to-learn boilerplate to get started with cross platform apps with react-native quickly, while also keeping it simple for new developers to start learning and join on this stack.
 
@@ -14,7 +14,7 @@ A React Native boilerplate with Redux, Sagas, Reselect & more. The goal is to ma
 * (more to be added soon)
 
 ## How to get started?
-To install, clone this repository: `git clone https://github.com/ankitduseja/react-native-stack.git`
+To install, clone this repository: `git clone https://github.com/ankitduseja/react-native-boilerplate.git`
 
 Then run `npm install` to install.
 
@@ -26,8 +26,10 @@ To the start the IOS app: `react-native run-ios`
 
 ## TODO:
 * Add Integration for React Web using React Native.
-* Add more examples.
-* Setup scripts to create new components/containers and clean the examples.
+* Add more examples. Make better UI of existing one's.
+* Write testing script (using enzyme, mocha).
+* Make Redux store persist across sessions or provide a way to persist some data of store.
+* Setup scripts to create new components/containers and clean the pre-included examples to begin a clean project.
 * Create tutorials explaining the project architecture.
 
 ## Contribute
