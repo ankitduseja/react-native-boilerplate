@@ -1,4 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
+import { persistStore, autoRehydrate } from 'redux-persist';
+import immutableTransform from 'redux-persist-transform-immutable';
+import { AsyncStorage } from 'react-native';
 import { fromJS } from 'immutable';
 
 // import devToolsEnhancer from 'remote-redux-devtools';
@@ -14,8 +17,20 @@ const middlewares = [
   sagaMiddleware,
 ];
 
-const enhancers = composeWithDevTools(applyMiddleware(...middlewares))
+const persistEnhancer = autoRehydrate();
+
+// Normal way to compose multiple middlewares, compose needs to be imported from redux
+// const enhancers = compose(applyMiddleware(...middlewares), anotherEnhancer)
+
+const enhancers = composeWithDevTools(applyMiddleware(...middlewares), persistEnhancer)
 let store = createStore(reducers,{},enhancers);
+persistStore(store,{
+  storage: AsyncStorage, transforms: [
+    immutableTransform({
+      blacklist: ['globalReducer'] //blacklist non-immutable reducers
+    })
+  ]
+}) //use .purge(); here if you want to delete the persisted value of store
 
 
 // Extensions

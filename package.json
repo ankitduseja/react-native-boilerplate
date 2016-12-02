@@ -13,6 +13,8 @@
     "react-native-router-flux": "^3.37.0",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
+    "redux-persist": "^4.0.0-beta1",
+    "redux-persist-transform-immutable": "^4.1.0",
     "redux-saga": "^0.13.0",
     "reselect": "^2.5.4"
   },
